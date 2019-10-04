@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>To do</h2>
+
+  <!--  <input class="new-product" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newProduct.productName" (keyup.enter)="addProduct()">-->
+
+  <section class="main" *ngIf="products.length > 0">
+
+
+    <ng-container *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+      <!--                <div class="example-box"  cdkDrag>{{product.productName}}</div>-->
+    </ng-container>
+
+  </section>
+</div>
