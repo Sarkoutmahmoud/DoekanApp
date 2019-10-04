@@ -4,9 +4,11 @@
   <!--  <input class="new-product" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newProduct.productName" (keyup.enter)="addProduct()">-->
 
   <section class="main" *ngIf="products.length > 0">
-    <ng-container *ngFor="let product of products">
-      <app-product [product]="product" (clickedEvent)="reSortProduct($event)"></app-product>
-    </ng-container>
+
+
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <app-product *ngFor="let product of products" cdkDrag [product]="product" (clickedEvent)="reSortProduct($event)"></app-product>
+    </div>
 
   </section>
 </div>
