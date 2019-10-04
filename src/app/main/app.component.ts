@@ -14,7 +14,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag
 export class AppComponent {
   name = 'Angular';
 
-  products : Product[]  = [{
+  products: Product[] = [{
     quantity: 2,
     productName: 'bananen',
     complete: false
@@ -22,7 +22,7 @@ export class AppComponent {
     {
       quantity: 3,
       productName: 'apple',
-      complete: true
+      complete: false
     },
     {
       quantity: 4,

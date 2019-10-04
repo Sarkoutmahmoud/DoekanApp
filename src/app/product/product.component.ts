@@ -14,5 +14,8 @@ export class ProductComponent {
   constructor() {
   }
 
+  public toggleProduct(): void {
+    this.product.complete = !this.product.complete;
+  }
 
 }

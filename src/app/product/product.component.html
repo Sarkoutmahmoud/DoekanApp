@@ -1,1 +1,4 @@
-<div [ngClass]="{'productCompleted':product.complete}" class="product" >{{product.productName}}</div>
+<div [ngClass]="{'productCompleted':product.complete}" class="product">
+  <input type="checkbox" id="checkBoxCompleted"
+         (click)="toggleProduct()">{{product.productName}}
+</div>
