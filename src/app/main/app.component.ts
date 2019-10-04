@@ -35,6 +35,11 @@ export class AppComponent {
   constructor() {
   }
 
+  reSortProduct(product: Product): void {
+    const targetPosition = product.complete ? this.products.length : 0;
+    moveItemInArray(this.products, this.products.indexOf(product), targetPosition)
+  }
+
   drop(event: CdkDragDrop<Product[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -45,4 +50,6 @@ export class AppComponent {
         event.currentIndex);
     }
   }
+
+
 }

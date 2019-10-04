@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from "../model/Product/product";
 
 @Component({
@@ -11,11 +11,17 @@ export class ProductComponent {
   @Input()
   product: Product;
 
+  @Output()
+  public clickedEvent : EventEmitter<Product> = new EventEmitter<Product>();
+
   constructor() {
   }
 
   public toggleProduct(): void {
     this.product.complete = !this.product.complete;
+    this.clickedEvent.emit(this.product);
   }
+
+
 
 }

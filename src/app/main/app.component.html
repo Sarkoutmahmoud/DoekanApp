@@ -5,7 +5,7 @@
 
   <section class="main" *ngIf="products.length > 0">
     <ng-container *ngFor="let product of products">
-      <app-product [product]="product"></app-product>
+      <app-product [product]="product" (clickedEvent)="reSortProduct($event)"></app-product>
     </ng-container>
 
   </section>
