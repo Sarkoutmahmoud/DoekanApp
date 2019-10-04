@@ -1,7 +1,7 @@
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {Component} from '@angular/core';
-import {Product} from "../model/Product/product";
+import {Product} from "../product/product.model";
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag-drop";
 
 

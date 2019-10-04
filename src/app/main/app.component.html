@@ -1,13 +1,16 @@
 <div class="container">
   <h2>To do</h2>
 
-  <!--  <input class="new-product" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newProduct.productName" (keyup.enter)="addProduct()">-->
+
+  <input class="new-product" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newProduct.productName"
+         (keyup.enter)="addProduct()">
 
   <section class="main" *ngIf="products.length > 0">
 
 
     <div cdkDropList (cdkDropListDropped)="drop($event)">
-        <app-product *ngFor="let product of products" cdkDrag [product]="product" (clickedEvent)="reSortProduct($event)"></app-product>
+      <app-product *ngFor="let product of products" cdkDrag [product]="product"
+                   (clickedEvent)="reSortProduct($event)"></app-product>
     </div>
 
   </section>

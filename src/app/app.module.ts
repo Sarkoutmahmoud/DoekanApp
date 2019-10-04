@@ -12,12 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ProductComponent } from './product/product.component';
+import { ProductCreatorComponent } from './product-creator/product-creator.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    ProductCreatorComponent
   ],
   imports: [
     BrowserModule,
