@@ -14,6 +14,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ProductComponent } from './product/product.component';
 import { ProductCreatorComponent } from './product-creator/product-creator.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatListModule,
     DragDropModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

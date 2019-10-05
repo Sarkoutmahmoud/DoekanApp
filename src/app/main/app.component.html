@@ -1,16 +1,33 @@
+<mat-toolbar color="primary">
+  <span>boodschApp</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+</mat-toolbar>
+
+<div>
+<app-product-creator [products]="products" (productAdded)="addProduct($event)"></app-product-creator>
+</div>
+
+
 <div class="container">
-  <h2>To do</h2>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Producten</mat-card-title>
+      <mat-card-subtitle>boodschappen lijst</mat-card-subtitle>
+    </mat-card-header>
 
-  <app-product-creator [products]="products" (productAdded)="addProduct($event)"></app-product-creator>
-
-  <section class="main" *ngIf="products.length > 0">
+    <mat-card-content class="main" *ngIf="products.length > 0">
 
 
-    <div cdkDropList (cdkDropListDropped)="drop($event)">
-      <app-product *ngFor="let product of products" cdkDrag [product]="product"
-                   (clickedEvent)="reSortProduct($event)"
-                    (removedEvent)="deleteProduct($product)"></app-product>
-    </div>
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <app-product *ngFor="let product of products" cdkDrag [product]="product"
+                     (clickedEvent)="reSortProduct($event)"
+                     (removedEvent)="deleteProduct($event)">
+        </app-product>
+      </div>
 
-  </section>
+
+    </mat-card-content>
+  </mat-card>
 </div>

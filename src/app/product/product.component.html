@@ -1,5 +1,16 @@
-<div [ngClass]="{'productCompleted':product.complete}" class="product">
-  <i class="material-icons"  *ngIf="!product.complete" (click)="toggleProduct()"> done</i>
-  <i class="material-icons"  *ngIf="product.complete" (click)="removeProduct()"> clear</i>
-  {{product.productName}}
+<div class="product">
+
+  <div [ngClass]="{'productCompleted':product.complete}" class="product-label">
+    <span class="product-quantity">
+      {{product.quantity}}
+    </span>
+    <span>
+      {{product.productName}}
+    </span>
+  </div>
+  <div class="icons">
+    <i class="material-icons" *ngIf="!product.complete" (click)="toggleProduct()"> done</i>
+    <i class="material-icons" *ngIf="product.complete" (click)="removeProduct()"> clear</i>
+    <i class="material-icons" *ngIf="product.complete" (click)="toggleProduct()"> undo</i>
+  </div>
 </div>

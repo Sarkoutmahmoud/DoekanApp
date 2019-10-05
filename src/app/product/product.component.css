@@ -1,9 +1,35 @@
 .productCompleted {
   text-decoration: line-through;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.product {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.product-label {
+  padding: 10px 20px;
+  color: black;
+  font-weight: bold;
+  background: #39cfff;
+  border: none;
+  border-radius: 50px;
+}
+
+.product-quantity {
+  padding: 5px;
+  background: #a0fafa;
+  border: none;
+  border-radius: 50px;
 }
 
