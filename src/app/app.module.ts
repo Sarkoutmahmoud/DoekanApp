@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ProductComponent } from './product/product.component';
 import { ProductCreatorComponent } from './product-creator/product-creator.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProductCreatorComponent } from './product-creator/product-creator.compo
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    DragDropModule
+    DragDropModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

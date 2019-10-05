@@ -1,4 +1,5 @@
 <div [ngClass]="{'productCompleted':product.complete}" class="product">
-  <input type="checkbox" id="checkBoxCompleted"
-         (click)="toggleProduct()">{{product.productName}}
+  <i class="material-icons"  *ngIf="!product.complete" (click)="toggleProduct()"> done</i>
+  <i class="material-icons"  *ngIf="product.complete" (click)="removeProduct()"> clear</i>
+  {{product.productName}}
 </div>

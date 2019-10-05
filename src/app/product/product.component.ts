@@ -14,6 +14,9 @@ export class ProductComponent {
   @Output()
   public clickedEvent : EventEmitter<Product> = new EventEmitter<Product>();
 
+  @Output()
+  public removedEvent : EventEmitter<Product> = new EventEmitter<Product>();
+
   constructor() {
   }
 
@@ -23,5 +26,7 @@ export class ProductComponent {
   }
 
 
-
+  removeProduct() : void {
+    this.removedEvent.emit(this.product);
+  }
 }

@@ -44,5 +44,12 @@ export class AppComponent {
     moveItemInArray(this.products, event.previousIndex, event.currentIndex);
   }
 
+  addProduct(product : Product) {
+    this.products.push(product);
+    moveItemInArray(this.products, this.products.indexOf(product), 0);
+  }
 
+  deleteProduct(product: Product) {
+    this.products.splice(this.products.indexOf(product), 1);
+  }
 }
