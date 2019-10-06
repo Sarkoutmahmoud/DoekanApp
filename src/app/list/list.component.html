@@ -1,0 +1,18 @@
+<div class="productLists" *ngIf="products.length > 0">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Producten</mat-card-title>
+      <mat-card-subtitle>boodschappen lijst</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <app-product *ngFor="let product of products" cdkDrag [product]="product"
+                     (clickedEvent)="reSortProduct($event)"
+                     (removedEvent)="deleteProduct($event)">
+        </app-product>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
