@@ -5,12 +5,9 @@
   <span class="example-fill-remaining-space"></span>
 </mat-toolbar>
 
-<div>
 <app-product-creator [products]="products" (productAdded)="addProduct($event)"></app-product-creator>
-</div>
 
-
-<div class="container">
+<div class="productLists">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Producten</mat-card-title>

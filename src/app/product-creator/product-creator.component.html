@@ -1,34 +1,31 @@
-
-<mat-card class = "container">
+<mat-card class="container">
   <mat-card-header>
     <mat-card-title>Voeg een product toe</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-  <form [formGroup]="productForm" (ngSubmit)="addProduct()" class="example-form">
-
-  <mat-form-field class="example-full-width">
-    <input matInput type="number"
-           min="1"
-           max="999"
-           id="quantity"
-           formControlName="quantity"
-           placeholder="voer aantal in"
-           class="form-control">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput
-           type="String"
-           minlength=1
-           maxlength=10
-           id="productName"
-           placeholder="voer product naam in"
-           formControlName="productName"
-           class="form-control">
-  </mat-form-field>
-  <i class="material-icons" (click)="addProduct()">
-    add
-  </i>
-  <!--  <button>add</button>-->
-</form>
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+      <mat-form-field class="full-width">
+        <input matInput type="number"
+               min="1"
+               max="999"
+               id="quantity"
+               formControlName="quantity"
+               placeholder="voer aantal in"
+               class="form-control">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput
+               type="String"
+               minlength=1
+               maxlength=10
+               id="productName"
+               placeholder="voer product naam in"
+               formControlName="productName"
+               class="form-control">
+      </mat-form-field>
+      <div class = "button">
+      <i class="material-icons" (click)="addProduct()">add</i>
+        </div>
+    </form>
   </mat-card-content>
 </mat-card>
