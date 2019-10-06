@@ -1,6 +1,12 @@
 # BoodschApp
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
+
+## Gebruikte tools
+
+Angular materials componenten zijn gebruikt bij het maken dit project. https://material.angular.io/
+
+Daarbij is ook  materialize css gebruikt wat een javascript library is.
+https://materializecss.com/getting-started.html
 
 ## Development server
 

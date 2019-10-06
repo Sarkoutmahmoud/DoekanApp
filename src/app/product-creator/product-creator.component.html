@@ -23,9 +23,11 @@
                formControlName="productName"
                class="form-control">
       </mat-form-field>
-      <div class = "button">
-      <i class="material-icons" (click)="addProduct()">add</i>
-        </div>
+
+      <mat-card-actions>
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons"  (click)="addProduct()">add</i></a>
+      </mat-card-actions>
+
     </form>
   </mat-card-content>
 </mat-card>

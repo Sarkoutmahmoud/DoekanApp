@@ -34,22 +34,9 @@ export class AppComponent {
   }
 
 
-
-  drop(event: CdkDragDrop<Product[]>) {
-    moveItemInArray(this.products, event.previousIndex, event.currentIndex);
-  }
-
   addProduct(product : Product) : void {
     this.products.push(product);
     moveItemInArray(this.products, this.products.indexOf(product), 0);
   }
 
-  deleteProduct(product: Product) : void {
-    this.products.splice(this.products.indexOf(product), 1);
-  }
-
-  reSortProduct(product: Product): void {
-    const targetPosition = product.complete ? this.products.length : 0;
-    moveItemInArray(this.products, this.products.indexOf(product), targetPosition)
-  }
 }

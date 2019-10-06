@@ -7,24 +7,4 @@
 
 <app-product-creator [products]="products" (productAdded)="addProduct($event)"></app-product-creator>
 
-<div class="productLists">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Producten</mat-card-title>
-      <mat-card-subtitle>boodschappen lijst</mat-card-subtitle>
-    </mat-card-header>
-
-    <mat-card-content class="main" *ngIf="products.length > 0">
-
-
-      <div cdkDropList (cdkDropListDropped)="drop($event)">
-        <app-product *ngFor="let product of products" cdkDrag [product]="product"
-                     (clickedEvent)="reSortProduct($event)"
-                     (removedEvent)="deleteProduct($event)">
-        </app-product>
-      </div>
-
-
-    </mat-card-content>
-  </mat-card>
-</div>
+<app-list [products]="products"></app-list>
