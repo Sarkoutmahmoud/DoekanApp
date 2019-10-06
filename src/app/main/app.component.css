@@ -5,9 +5,7 @@
   margin: auto;
   vertical-align: top;
 }
-.enterProductScreen {
 
-}
 /* Highlight the list item that is being dragged. */
 .cdk-drag-preview {
   border-radius: 4px;
