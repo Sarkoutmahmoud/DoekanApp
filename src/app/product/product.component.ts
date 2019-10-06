@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "./product.model";
 
 @Component({
@@ -12,10 +12,10 @@ export class ProductComponent {
   product: Product;
 
   @Output()
-  public clickedEvent : EventEmitter<Product> = new EventEmitter<Product>();
+  public clickedEvent: EventEmitter<Product> = new EventEmitter<Product>();
 
   @Output()
-  public removedEvent : EventEmitter<Product> = new EventEmitter<Product>();
+  public removedEvent: EventEmitter<Product> = new EventEmitter<Product>();
 
   constructor() {
   }
@@ -26,7 +26,7 @@ export class ProductComponent {
   }
 
 
-  removeProduct() : void {
+  removeProduct(): void {
     this.removedEvent.emit(this.product);
   }
 }

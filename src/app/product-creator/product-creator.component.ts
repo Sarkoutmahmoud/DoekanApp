@@ -29,7 +29,7 @@ export class ProductCreatorComponent implements OnInit {
   }
 
   public addProduct(): void {
-    if (this.productForm.invalid){
+    if (this.productForm.invalid) {
       return;
     }
     const product: Product = {
